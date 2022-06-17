@@ -160,7 +160,7 @@
     var _hmt = _hmt || [];
     (function() {
         var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?47acec2d282c3986f1b600abdc11c7ab";
+        hm.src = "https://hm.baidu.com/hm.js?7c91fcf236b1737e463a2657f8c4709f";
         var s = document.getElementsByTagName("script")[0]; 
         s.parentNode.insertBefore(hm, s);
     })();

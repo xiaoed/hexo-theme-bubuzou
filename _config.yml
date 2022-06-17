@@ -13,15 +13,15 @@ widgets:
 
 # count
 show_count: true
-favicon: https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/favicon.ico
-logo: https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/logo.png
-style: https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/bubuzou.css
+favicon: http://image.xiaoed.com/blog/image/xiaoed-blog.png-128.png
+logo: http://image.xiaoed.com/blog/image/xiaoed-blog.png-128.png
+style: http://image.xiaoed.com/blog/css/bubuzou.css
 
 # Comment
 #changyan: bubuzou
 leancloud:
-    appid: aD8jJBpu4oew3ovNY73z6Rdq-gzGzoHsz # 填写您的appid
-    appkey: FdzS5SOPHdhYQoEUngQ8K2QW # 填写您的appkey
+    appid: CSoYDTggxz9zEqaPGhtj2Fbp-gzGzoHsz # 填写您的appid
+    appkey: FDj4DHDrK0MxN5qsU3G2pLwa # 填写您的appkey
     comment: true # 是否开启评论系统
     timer: true # 是否开启文章统计
 
@@ -31,5 +31,5 @@ leancloud:
 ga: UA-65933410-1
 
 # Copyright Infomation
-startyear: 2016
+startyear: 2019
 
