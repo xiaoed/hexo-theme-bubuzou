@@ -15,8 +15,8 @@ widgets:
 show_count: true
 favicon: http://image.xiaoed.com/blog/image/xiaoed-blog.png-128.png
 logo: http://image.xiaoed.com/blog/image/xiaoed-blog.png-128.png
-# style: http://image.xiaoed.com/blog/css/bubuzou.css
-style: css/bubuzou.css
+style: http://image.xiaoed.com/blog/css/bubuzou.css
+# style: css/bubuzou.css
 
 # Comment
 #changyan: bubuzou
