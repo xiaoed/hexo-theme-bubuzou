@@ -563,9 +563,9 @@ header .nav-list-item .active { opacity: 0.7; }
 
 #mask #mask-image { max-width: 95%; }
 
+/*
 code,
 pre {
-	/* font-family: "Source Code Pro", Monaco, Menlo, Consolas, monospace; */
 	font-family: Menlo, Monaco, Consolas, Courier New, monospace;
     font-size: 0.9333em;
     background-color: #f6f8fa;
@@ -594,7 +594,6 @@ pre {
 .highlight .code pre {
     margin: 0;
     padding: 1.2em 1.4em;
-	/* font-family: "Source Code Pro", Monaco, Menlo, Consolas, monospace; */
 	font-family: Menlo, Monaco, Consolas, Courier New, monospace;
     font-size: 14px;
     line-height: 1.5em;
@@ -738,6 +737,8 @@ pre .xml .javascript,
 pre .xml .vbscript,
 pre .xml .css,
 pre .xml .cdata { opacity: 0.5; }
+
+*/
 
 .paginator {
     margin: 4em 0;

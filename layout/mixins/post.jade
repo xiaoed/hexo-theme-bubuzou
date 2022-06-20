@@ -1,10 +1,11 @@
 mixin postInfo(item)
     .post-info
         != date(item.date, 'YYYY-MM-DD')
-        if theme.leancloud.timer
+        if theme.leancloud.counter
             p.visit
-                i(class="article-timer", data-identity=item.path)
-                span 次访问
+                span(class="article-timer")
+                    i(class="post-meta-item-text") 阅读量   
+                    i(class="article-timer-count", data-identity=item.path)
         if item.from && (is_home() || is_post())
             a.post-from(href=item.from target="_blank" title=item.from) 原文地址
         if item.demo && ( is_home() || is_post() )
