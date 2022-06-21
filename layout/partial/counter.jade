@@ -75,7 +75,7 @@ script.
     const calcAndWriteTimes = () => {
         let isPost = !{ is_post() };
         let timerAllDOM = document.querySelectorAll(".article-timer-count");
-        if(isPost) {
+        if(isPost && timerAllDOM.length === 1) {
             let identity = timerAllDOM[0].getAttribute("data-identity");
             valineAPI.isExist(identity)
             .then(exist => {
@@ -105,22 +105,24 @@ script.
             }
         }
 
-        let identities = Object.keys(timerDOMCache);
-        valineAPI._get(identities).then(results => {
-            for(let result of results) {
-                let {identity, times} = result.attributes;
-                timerDOMCache[identity].times = times;
-                timerDOMCache[identity].dom.map(item => item.innerText = times);
-            }
-            
-            for(let identity of identities) {
-                if(timerDOMCache[identity].times){
-                    continue;
+        if (timerDOMCache.length > 0) {
+            let identities = Object.keys(timerDOMCache);
+            valineAPI._get(identities).then(results => {
+                for(let result of results) {
+                    let {identity, times} = result.attributes;
+                    timerDOMCache[identity].times = times;
+                    timerDOMCache[identity].dom.map(item => item.innerText = times);
                 }
-                timerDOMCache[identity].dom.map(item => item.innerText = 0);
-                // valineAPI.create(identity);
-            }
-        }).catch(error => console.log(error.message))
+                
+                for(let identity of identities) {
+                    if(timerDOMCache[identity].times){
+                        continue;
+                    }
+                    timerDOMCache[identity].dom.map(item => item.innerText = 0);
+                    // valineAPI.create(identity);
+                }
+            }).catch(error => console.log(error.message))
+        }
     }
 
     if(!{ theme.leancloud.counter }){

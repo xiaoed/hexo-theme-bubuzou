@@ -18,7 +18,7 @@ html(lang=config.language)
             section.container
                 block container
                 .right-container
-                    if (is_post())
+                    if (is_post() || is_page())
                         include ../widget/catalog
                     else 
                         include ../widget/category
