@@ -105,8 +105,8 @@ script.
             }
         }
 
-        if (timerDOMCache.length > 0) {
-            let identities = Object.keys(timerDOMCache);
+        let identities = Object.keys(timerDOMCache);
+        if (identities.length > 0) {
             valineAPI._get(identities).then(results => {
                 for(let result of results) {
                     let {identity, times} = result.attributes;
