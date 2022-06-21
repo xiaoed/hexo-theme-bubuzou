@@ -1,3 +1,5 @@
+// 评论模块
+
 if theme.leancloud.comment
     a(href="#comment", class="comment-anchor")
     div(id="vcomments")
@@ -7,8 +9,8 @@ if theme.leancloud.comment
             appId: "!{ theme.leancloud.appid }",
             appKey: "!{ theme.leancloud.appkey }",
             notify: false,
-            verify: false,
-            avatar: "robohash",
+            avatar: "!{ theme.leancloud.avatar }",
             visitor: false,
-            placeholder: "随便说点什么～.～",
+            placeholder: "!{ theme.leancloud.placeholder }",
+            pageSize: "!{ theme.leancloud.pageSize }",
         });

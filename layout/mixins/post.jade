@@ -1,23 +1,23 @@
 mixin postInfo(item)
     .post-info
         != date(item.date, 'YYYY-MM-DD')
-        if theme.leancloud.counter
+        if theme.leancloud.counter && (is_home() || is_post())
             p.visit
-                span(class="article-timer")
-                    i(class="post-meta-item-text") 阅读量   
+                span.article-timer
+                    i(class="post-meta-item-text")!= __('counter') 
                     i(class="article-timer-count", data-identity=item.path)
         if item.from && (is_home() || is_post())
-            a.post-from(href=item.from target="_blank" title=item.from) 原文地址
+            a.post-from(href=item.from target="_blank" title=item.from)!= __('from_url')
         if item.demo && ( is_home() || is_post() )
-            a.post-demo(href=item.demo target="_blank" title="") 去看示例
+            a.post-demo(href=item.demo target="_blank" title="")!= __('demo_url')
 // for archive page
 mixin postInfoAr(item)
     .post-info
         != date(item.date, 'MM-DD')
         if item.from && (is_home() || is_post())
-            a.post-from(href=item.from target="_blank" title=item.from) 原文地址
+            a.post-from(href=item.from target="_blank" title=item.from)!= __('from_url')
         if item.demo && ( is_home() || is_post() )
-            a.post-demo(href=item.demo target="_blank" title="") 去看示例
+            a.post-demo(href=item.demo target="_blank" title="")!= __('demo_url')
 //- Index Page
 mixin posts()
     ul.home.post-list

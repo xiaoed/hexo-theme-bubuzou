@@ -3,3 +3,10 @@ next: NEXT
 prev_post: PREV
 next_post: NEXT
 more: ...more
+counter: COUNTER&nbsp;
+from_url: FROM_URL
+demo_url: DEMO_URL
+search: Search
+archives: Archives
+recent: Recent
+tagcloud: Tagcloud

@@ -1,7 +1,6 @@
 meta(charset="utf-8")
 meta(name="X-UA-Compatible", content="IE=edge")
-meta(name="baidu-site-verification", content="code-LsTfl4Z3oP")
-<!-- meta(name="google-site-verification", content="K7thEgdLm0UfRWJ5MGdF7sCcjClSzAlxFLPv2Oz5CGM") -->
+meta(name="baidu-site-verification", content=theme.analytics.baiduSiteVerification)
 
 title 
     block site_title
@@ -18,7 +17,7 @@ script.
     var _hmt = _hmt || [];
     (function() {
     var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?7c91fcf236b1737e463a2657f8c4709f";
+    hm.src = "!{ theme.analytics.hmBaiduUrl }";
     var s = document.getElementsByTagName("script")[0]; 
     s.parentNode.insertBefore(hm, s);
     })();
@@ -26,9 +25,17 @@ script.
 - var xml = config.url + '/atom.xml'
     link(rel="search", type="application/opensearchdescription+xml", href=xml, title=config.title)
 
-<link rel="stylesheet" href="http://image.xiaoed.com/blog/css/prism.css">
+if theme.staticCache.enable
+    <link rel="stylesheet" href="!{ theme.staticCache.cssUrlPrefix }/prism.css">
+else 
+    <link rel="stylesheet" href="/css/prism.css">
+
 <!-- https://unpkg.com/browse/leancloud-storage@4.12.2/dist/ -->
-<script src="http://image.xiaoed.com/blog/script/av-min.js"></script>
+if theme.staticCache.enable
+    <script src="!{ theme.staticCache.jsUrlPrefix }/av-min.js"></script>
+else 
+    <script src="/scripts/av-min.js"></script>
+
 <!-- https://valine.js.org/ -->
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 

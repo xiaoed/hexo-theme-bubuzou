@@ -28,7 +28,7 @@ html(lang=config.language)
         .modal.search-modal
             .input-field
                 input(type='text', id='search_input')
-                label(for='search-input') 搜索
+                label(for='search-input')!= __('search') 
             #search_result.search-result
         .blog-overlay
 

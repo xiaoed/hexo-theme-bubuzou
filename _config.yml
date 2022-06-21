@@ -1,36 +1,46 @@
+# 菜单配置
 menu:
     博文: /
     归档: /archives/
-    生活: /categories/live/
-    读书: /categories/read/
+    生活: /live/
+    读书: /read/
     关于: /about/
 
+# 右侧快捷入口配置
 widgets:
 - category
 - tag
 - tagcloud
 - archive
 
-# count
-show_count: true
+# logo配置，css配置
 favicon: http://image.xiaoed.com/blog/image/xiaoed-blog.png-128.png
 logo: http://image.xiaoed.com/blog/image/xiaoed-blog.png-128.png
 style: http://image.xiaoed.com/blog/css/bubuzou.css
 # style: css/bubuzou.css
 
-# Comment
-#changyan: bubuzou
+# 评论相关配置 https://valine.js.org/configuration.html
 leancloud:
-    appid: CSoYDTggxz9zEqaPGhtj2Fbp-gzGzoHsz # 填写您的appid
-    appkey: FDj4DHDrK0MxN5qsU3G2pLwa # 填写您的appkey
     comment: true # 是否开启评论系统
     counter: true # 是否开启文章统计
-
-
-# Analytics
-# google-analytics:
-# ga: UA-65933410-1
+    appid: CSoYDTggxz9zEqaPGhtj2Fbp-gzGzoHsz # 填写您的appid
+    appkey: FDj4DHDrK0MxN5qsU3G2pLwa # 填写您的appkey
+    avatar: robohash # 评论头像类型
+    placeholder: 随便说点什么～.～ # 默认评论内容
+    pageSize: 10 # 每页评论数
 
 # Copyright Infomation
 startyear: 2019
 
+
+# 百度统计配置
+analytics:
+    baiduSiteVerification: code-LsTfl4Z3o
+    hmBaiduUrl: https://hm.baidu.com/hm.js?7c91fcf236b1737e463a2657f8c4709f
+
+# 静态文件远程云存储
+staticCache:
+    enable: true
+    jsUrlPrefix: http://image.xiaoed.com/blog/script
+    cssUrlPrefix: http://image.xiaoed.com/blog/css
+    imageUrlPrefix: http://image.xiaoed.com/blog/image
