@@ -19,6 +19,9 @@ logo: http://image.xiaoed.com/blog/image/xiaoed-blog.png-128.png
 style: http://image.xiaoed.com/blog/css/bubuzou.css
 # style: css/bubuzou.css
 
+# 备案号
+icpNo: 粤ICP备15004860号-1
+
 # 评论相关配置 https://valine.js.org/configuration.html
 leancloud:
     comment: true # 是否开启评论系统
